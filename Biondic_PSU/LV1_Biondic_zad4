@@ -1,0 +1,15 @@
+ime = input("Ime datoteke: ")
+
+dat = open(ime)
+
+zbroj = 0
+brojac = 0
+
+for linija in dat:
+    if linija.startswith("X-DSPAM-Confidence:"):
+        broj = float(linija.split(":")[1])
+        zbroj += broj
+        brojac += 1
+
+prosjek = zbroj / brojac
+print("Average X-DSPAM-Confidence:", prosjek)
