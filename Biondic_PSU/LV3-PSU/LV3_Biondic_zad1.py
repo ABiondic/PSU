@@ -28,3 +28,7 @@ print("Broj automobila s automatskim mjenjacem je: ",automatik, ",a broj automob
 autoistohp = ((mtcars['am'] == 1) & (mtcars['hp'] > 100)).sum()
 print("Broj automobila s automatskim mjenjacem i da ima preko 100 hp-a: ",autoistohp)
 
+mtcars['wt_kg'] = mtcars['wt'] * 1000 * 0.453592
+
+print("Masa svakog automobila u kilogramima:")
+print(mtcars[['car', 'wt_kg']])
